@@ -1,7 +1,8 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  BorderStyle = bsDialog
+  Caption = 'CRON Test'
   ClientHeight = 165
   ClientWidth = 292
   Color = clBtnFace
@@ -10,6 +11,7 @@ object Form1: TForm1
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
@@ -39,7 +41,13 @@ object Form1: TForm1
     Left = 112
     Top = 37
     Width = 145
-    Height = 23
+    Height = 22
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
     Text = '* * * * *'
   end
@@ -50,8 +58,9 @@ object Form1: TForm1
     Height = 23
     Date = 46039.000000000000000000
     Format = 'dd.MM.yyyy HH:mm:ss'
-    Time = 0.416666666664241300
-    Kind = dtkDateTime
+    Time = 0.416666666656965400
+    Kind = dtkTime
+    ParseInput = True
     TabOrder = 2
   end
   object CheckBox1: TCheckBox

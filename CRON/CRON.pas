@@ -169,10 +169,10 @@ end;
 
 function TCRON.MatchesDateTime(ATime: TDateTime): Boolean;
 begin
-  Result := FMinutes[ATime.GetMinute] and
-            FHours[ATime.GetHour] and
-            FDays[ATime.GetDay] and
-            FMonths[ATime.GetMonth] and
+  Result := FMinutes[MinuteOf(ATime)] and
+            FHours[HourOf(ATime)] and
+            FDays[DayOf(ATime)] and
+            FMonths[MonthOf(ATime)] and
             FWeekdays[DayOfWeek(ATime) - 1];
 end;
 
